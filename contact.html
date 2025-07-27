@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact - Orphosys</title>
+  <meta name="description" content="Contactez l’orphelinat Orphosys pour toute question ou information." />
+  <meta property="og:title" content="Contact - Orphosys" />
+  <meta property="og:description" content="Contactez l’orphelinat Orphosys pour toute question ou information." />
+  <meta property="og:image" content="Image 22 juil. 2025, 05_18_00.png" />
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Orphosys</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="activities.html">Enfants</a></li>
+      <li><a href="gallery.html">Galerie</a></li>
+      <li><a href="donate.html">Faire un don</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="burger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Contact</h1>
+
+    <div class="contact-card">
+      <div class="contact-infos left">
+        <p><span aria-label="Email" title="Email">📧</span> <strong>Email :</strong> <a href="mailto:contact@orphosys.org">contact@orphosys.org</a></p>
+        <p><span aria-label="Téléphone" title="Téléphone">📞</span> <strong>Téléphone :</strong> <a href="tel:+24206100101103">+242 06 100 10 11</a></p>
+        <p><span aria-label="Adresse" title="Adresse">📍</span> <strong>Adresse :</strong> 1 Base Industriellecers LVA, Pointe-Noire, République du Congo</p>
+        <p><span aria-label="Facebook" title="Facebook">📘</span> <strong>Facebook :</strong>
+          <a href="https://facebook.com/orphosys" target="_blank" rel="noopener noreferrer">facebook.com/orphosys</a>
+        </p>
+        <p><span aria-label="Instagram" title="Instagram">📸</span> <strong>Instagram :</strong>
+          <a href="https://instagram.com/orphosys" target="_blank" rel="noopener noreferrer">@orphosys</a>
+        </p>
+      </div>
+
+      <form action="https://formsubmit.co/contact@orphosys.org" method="POST">
+        <input type="text" id="nom" name="nom" placeholder="Nom" required />
+        <input type="email" id="email" name="email" placeholder="Email" required />
+        <textarea id="message" name="message" placeholder="Message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Orphosys. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff7ed;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* NAVIGATION */
+.navbar {
+  background-color: #f97316;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* BURGER MENU */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("Image/Image 22 juil. 2025, 05_18_00.png") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 0;
+}
+
+.hero h1,
+.hero .cta {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+/* BOUTONS */
+.cta {
+  background-color: #f97316;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.cta:hover {
+  background-color: #ea580c;
+}
+
+.cta.secondary {
+  background: #1e293b;
+  margin-top: 1rem;
+}
+
+/* SECTIONS */
+main {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0 0 2rem 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+main h1, main h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #f97316;
+}
+
+main p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+  color: #334155;
+}
+
+/* CONTACT SECTION */
+
+/* Encadrement de la zone contact */
+.contact-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(30,41,59,0.08);
+  max-width: 1100px;      /* Encore plus large */
+  width: 96vw;            /* Presque toute la largeur */
+  min-width: 320px;
+  margin: 2rem auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start; /* Ajoute ceci pour aligner tout le contenu à gauche */
+}
+
+@media (max-width: 800px) {
+  .contact-card {
+    max-width: 98vw;
+    padding: 1rem 0.5rem;
+  }
+}
+
+/* On remet le formulaire et les infos à la normale */
+.contact-infos.left {
+  width: 100%;
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-infos.left p {
+  margin: 0;
+  width: 100%;
+  text-align: left;
+  align-items: flex-start;
+  display: flex;
+  gap: 0.5em;
+}
+
+form {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+form label {
+  width: 100%;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  background: #f97316;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #ea580c;
+}
+
+/* GALERIE */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(30,41,59,0.08);
+}
+
+@media (max-width: 900px) {
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ACTIVITÉS */
+.activities-list {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #334155;
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.activities-list li {
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.activities-list li::before {
+  content: "🎈";
+  position: absolute;
+  left: -1.5rem;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f97316;
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f97316;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    padding: 1rem 0;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+    max-height: 500px; /* assez grand pour contenir tous les liens */
+  }
+
+  .burger {
+    display: flex;
+  }
+}
