@@ -2,15 +2,20 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact - Orphosys</title>
-  <meta name="description" content="Contactez l’orphelinat Orphosys pour toute question ou information." />
-  <meta property="og:title" content="Contact - Orphosys" />
-  <meta property="og:description" content="Contactez l’orphelinat Orphosys pour toute question ou information." />
+  <title>Faire un don - Orphosys</title>
+  <meta name="description" content="Soutenez l’orphelinat Orphosys en faisant un don." />
+  <meta property="og:title" content="Faire un don - Orphosys" />
+  <meta property="og:description" content="Soutenez l’orphelinat Orphosys en faisant un don." />
   <meta property="og:image" content="Image 22 juil. 2025, 05_18_00.png" />
   <meta name="robots" content="index, follow">
+
+  <!-- ✅ Ajout pour le responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- NAVIGATION -->
   <nav class="navbar">
     <div class="logo">Orphosys</div>
     <ul class="nav-links" id="nav-links">
@@ -18,7 +23,7 @@
       <li><a href="about.html">À propos</a></li>
       <li><a href="activities.html">Enfants</a></li>
       <li><a href="gallery.html">Galerie</a></li>
-      <li><a href="donate.html">Faire un don</a></li>
+      <li><a href="donate.html" class="active">Faire un don</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="burger" onclick="toggleMenu()">
@@ -28,22 +33,35 @@
     </div>
   </nav>
 
+  <!-- CONTENU PRINCIPAL -->
   <main>
     <h1>Faire un don</h1>
 
     <div class="contact-card">
+      <!-- INFOS POUR DONATEURS -->
       <div class="contact-infos left">
-        <p><span aria-label="Email" title="Email">📧</span> <strong>Email :</strong> <a href="mailto:contact@orphosys.org">contact@orphosys.org</a></p>
-        <p><span aria-label="Téléphone" title="Téléphone">📞</span> <strong>Téléphone :</strong> <a href="tel:+2420610010111">+242 06 100 10 11</a></p>
-        <p><span aria-label="Adresse" title="Adresse">📍</span> <strong>Adresse :</strong> 1 Base Industriellecers LVA, Pointe-Noire, République du Congo</p>
-        <p><span aria-label="Facebook" title="Facebook">📘</span> <strong>Facebook :</strong>
+        <p><span aria-label="Email" title="Email">📧</span> 
+          <strong>Email :</strong> 
+          <a href="mailto:contact@orphosys.org">contact@orphosys.org</a>
+        </p>
+        <p><span aria-label="Téléphone" title="Téléphone">📞</span> 
+          <strong>Téléphone :</strong> 
+          <a href="tel:+2420610010111">+242 06 100 10 11</a>
+        </p>
+        <p><span aria-label="Adresse" title="Adresse">📍</span> 
+          <strong>Adresse :</strong> 1 Base Industriellecers LVA, Pointe-Noire, République du Congo
+        </p>
+        <p><span aria-label="Facebook" title="Facebook">📘</span> 
+          <strong>Facebook :</strong>
           <a href="https://facebook.com/orphosys" target="_blank" rel="noopener noreferrer">facebook.com/orphosys</a>
         </p>
-        <p><span aria-label="Instagram" title="Instagram">📸</span> <strong>Instagram :</strong>
+        <p><span aria-label="Instagram" title="Instagram">📸</span> 
+          <strong>Instagram :</strong>
           <a href="https://instagram.com/orphosys" target="_blank" rel="noopener noreferrer">@orphosys</a>
         </p>
       </div>
 
+      <!-- FORMULAIRE DE DON -->
       <form action="https://formsubmit.co/contact@orphosys.org" method="POST">
         <input type="text" id="name" name="name" placeholder="Nom" required />
         <input type="email" id="email" name="email" placeholder="Email" required />
@@ -53,10 +71,12 @@
     </div>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Orphosys. Tous droits réservés.</p>
   </footer>
 
+  <!-- SCRIPT MENU BURGER -->
   <script>
     function toggleMenu() {
       document.getElementById('nav-links').classList.toggle('show');
