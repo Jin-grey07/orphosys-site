@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <meta charset="UTF-8">
+  <title>Contactez-nous</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+    .contact-container { max-width: 700px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+    .contact-info p { margin: 10px 0; }
+    form input, form textarea {
+      width: 100%; padding: 10px; margin: 10px 0;
+      border: 1px solid #ccc; border-radius: 5px;
+    }
+    form button {
+      background-color: #007BFF; color: white;
+      padding: 10px 20px; border: none; border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover { background-color: #0056b3; }
+  </style>
   <meta charset="UTF-8" />
-  <title>Faire un don - Orphosys</title>
-  <meta name="description" content="Soutenez l’orphelinat Orphosys en faisant un don." />
-  <meta property="og:title" content="Faire un don - Orphosys" />
-  <meta property="og:description" content="Soutenez l’orphelinat Orphosys en faisant un don." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accueil - Orphosys</title>
+  <meta name="description" content="Bienvenue sur le site officiel de l’orphelinat Orphosys." />
+  <meta property="og:title" content="Accueil - Orphosys" />
+  <meta property="og:description" content="Découvrez Orphosys, un orphelinat engagé pour l’avenir des enfants." />
   <meta property="og:image" content="Image 22 juil. 2025, 05_18_00.png" />
   <meta name="robots" content="index, follow">
-
-  <!-- ✅ Ajout pour le responsive -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- NAVIGATION -->
+  
+   <!-- NAVIGATION -->
   <nav class="navbar">
-    <div class="logo">Orphosys</div>
+    <div class="logo">
+      <!-- Concept : Une silhouette d’enfant stylisée, protégée par deux mains ouvertes formant un cœur. -->
+      <!-- Ce logo symbolise : Protection, amour, bienveillance, avenir. -->
+      <img src="logo_orphosys.svg" alt="Logo Orphosys" width="50" />
+    <span>Orphosys</span>
+    </div>
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Accueil</a></li>
       <li><a href="about.html">À propos</a></li>
       <li><a href="activities.html">Enfants</a></li>
       <li><a href="gallery.html">Galerie</a></li>
-      <li><a href="donate.html" class="active">Faire un don</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html">Faire un don</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
     <div class="burger" onclick="toggleMenu()">
       <div></div>
@@ -33,44 +53,53 @@
     </div>
   </nav>
 
-  <!-- CONTENU PRINCIPAL -->
+  <!-- MAIN CONTENT :Contenu principal -->
   <main>
+    <div class="contact-container">
     <h1>Faire un don</h1>
-
-    <div class="contact-card">
-      <!-- INFOS POUR DONATEURS -->
-      <div class="contact-infos left">
-        <p><span aria-label="Email" title="Email">📧</span> 
-          <strong>Email :</strong> 
-          <a href="mailto:contact@orphosys.org">contact@orphosys.org</a>
-        </p>
-        <p><span aria-label="Téléphone" title="Téléphone">📞</span> 
-          <strong>Téléphone :</strong> 
-          <a href="tel:+2420610010111">+242 06 100 10 11</a>
-        </p>
-        <p><span aria-label="Adresse" title="Adresse">📍</span> 
-          <strong>Adresse :</strong> 1 Base Industriellecers LVA, Pointe-Noire, République du Congo
-        </p>
-        <p><span aria-label="Facebook" title="Facebook">📘</span> 
-          <strong>Facebook :</strong>
-          <a href="https://facebook.com/orphosys" target="_blank" rel="noopener noreferrer">facebook.com/orphosys</a>
-        </p>
-        <p><span aria-label="Instagram" title="Instagram">📸</span> 
-          <strong>Instagram :</strong>
-          <a href="https://instagram.com/orphosys" target="_blank" rel="noopener noreferrer">@orphosys</a>
-        </p>
-      </div>
-
-      <!-- FORMULAIRE DE DON -->
-      <form action="https://formsubmit.co/contact@orphosys.org" method="POST">
-        <input type="text" id="name" name="name" placeholder="Nom" required />
-        <input type="email" id="email" name="email" placeholder="Email" required />
-        <input type="number" id="amount" name="amount" placeholder="Montant (€)" min="1" required />
-        <button type="submit">Donner</button>
-      </form>
+    <P>Chaque don, petit ou grand, contribue à offrir un avenir meilleur à nos enfants.
+      Votre générosité permet de financer les soins, l'éducation et le bien-être des enfants.
+      Merci de votre soutien !
+    </P>
+<h2>Moyen de donation</h2>
+    <div class="contact-info">
+      <p><strong>Mobile money :</strong> +242 06 123 4567</p>
+      <p><strong>Virement bancaire :</strong> 
+      <ul>
+        <li>Nom du titulaire : Orphelinat Orphosy</li>
+        <li>Banque : BCI Congo</li>
+        <!-- IBAN : International Bank Account Number
+         Un IBAN est une structure complète 
+         qui permet d’identifier un compte bancaire à l’échelle internationale -->
+        <li>IBAN : CG12345678910111213141516171819</li>
+        <!--SWIFT: fournit un réseau sécurisé 
+        permettant aux banques du monde entier d’échanger des 
+        informations financières, notamment pour les virements internationaux -->
+        <li>Code SWIFT : BCI-CG-XX</li>
+        
+      </ul>
+      </p>
+      <p><strong>Email :</strong> contact@orphosy.org</p>
     </div>
-  </main>
+<H3>Donnation direct</H3>
+    <p>Vous pouvez également faire un don directement en remplissant le formulaire ci-dessous.</p>
+  <!-- FORMULAIRE DE DON -->
+    <form action="https://formsubmit.co/contact@orphosys.org" method="post">
+      <input type="text" name="nom" placeholder="Votre nom" required />
+      <input type="email" name="email" placeholder="Votre email" required />
+     <input type="number" id="amount" name="amount" placeholder="Montant (€)" min="1" required />
+      <button type="submit">Envoyer</button>
+    </form>
 
+    <!-- Quand le bouton "Donner" est cliqué, les données du formulaire
+ sont envoyées au service FormSubmit, qui transmet le contenu à
+  l’adresse email contact@orphosys.org. 
+
+Ce formulaire permet de recevoir les informations de don
+directement par email, sans avoir besoin de script côté serveur. -->
+  </div>
+  </main>
+  
   <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Orphosys. Tous droits réservés.</p>
@@ -82,5 +111,6 @@
       document.getElementById('nav-links').classList.toggle('show');
     }
   </script>
+
 </body>
 </html>
