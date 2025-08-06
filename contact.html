@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <meta charset="UTF-8">
+  <title>Contactez-nous</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+    .contact-container { max-width: 700px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+    .contact-info p { margin: 10px 0; }
+    form input, form textarea {
+      width: 100%; padding: 10px; margin: 10px 0;
+      border: 1px solid #ccc; border-radius: 5px;
+    }
+    form button {
+      background-color: #007BFF; color: white;
+      padding: 10px 20px; border: none; border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover { background-color: #0056b3; }
+  </style>
   <meta charset="UTF-8" />
-  <title>Contact - Orphosys</title>
-  <meta name="description" content="Contactez l’orphelinat Orphosys pour toute question ou information." />
-  <meta property="og:title" content="Contact - Orphosys" />
-  <meta property="og:description" content="Contactez l’orphelinat Orphosys pour toute question ou information." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accueil - Orphosys</title>
+  <meta name="description" content="Bienvenue sur le site officiel de l’orphelinat Orphosys." />
+  <meta property="og:title" content="Accueil - Orphosys" />
+  <meta property="og:description" content="Découvrez Orphosys, un orphelinat engagé pour l’avenir des enfants." />
   <meta property="og:image" content="Image 22 juil. 2025, 05_18_00.png" />
   <meta name="robots" content="index, follow">
-  
-  <!-- ✅ Ajout essentiel pour le responsive -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Feuille de style -->
-  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- NAVIGATION -->
+  
+   <!-- NAVIGATION -->
   <nav class="navbar">
-    <div class="logo">Orphosys</div>
+    <div class="logo">
+      <!-- Concept : Une silhouette d’enfant stylisée, protégée par deux mains ouvertes formant un cœur. -->
+      <!-- Ce logo symbolise : Protection, amour, bienveillance, avenir. -->
+      <img src="logo_orphosys.svg" alt="Logo Orphosys" width="50" />
+    <span>Orphosys</span>
+    </div>
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Accueil</a></li>
       <li><a href="about.html">À propos</a></li>
@@ -34,41 +53,27 @@
     </div>
   </nav>
 
-  <!-- MAIN -->
+  <!-- MAIN CONTENT -->
   <main>
-    <h1>Contact</h1>
+    <div class="contact-container">
+    <h1>Contactez-nous</h1>
 
-    <div class="contact-card">
-      <!-- INFOS DE CONTACT -->
-      <div class="contact-infos left">
-        <p><span aria-label="Email" title="Email">📧</span> <strong>Email :</strong> 
-          <a href="mailto:contact@orphosys.org">contact@orphosys.org</a>
-        </p>
-        <p><span aria-label="Téléphone" title="Téléphone">📞</span> <strong>Téléphone :</strong> 
-          <a href="tel:+24206100101103">+242 06 100 10 11</a>
-        </p>
-        <p><span aria-label="Adresse" title="Adresse">📍</span> 
-          <strong>Adresse :</strong> 1 Base Industriellecers LVA, Pointe-Noire, République du Congo
-        </p>
-        <p><span aria-label="Facebook" title="Facebook">📘</span> 
-          <strong>Facebook :</strong>
-          <a href="https://facebook.com/orphosys" target="_blank" rel="noopener noreferrer">facebook.com/orphosys</a>
-        </p>
-        <p><span aria-label="Instagram" title="Instagram">📸</span> 
-          <strong>Instagram :</strong>
-          <a href="https://instagram.com/orphosys" target="_blank" rel="noopener noreferrer">@orphosys</a>
-        </p>
-      </div>
-
-      <!-- FORMULAIRE -->
-      <form action="https://formsubmit.co/contact@orphosys.org" method="POST">
-        <input type="text" id="nom" name="nom" placeholder="Nom" required />
-        <input type="email" id="email" name="email" placeholder="Email" required />
-        <textarea id="message" name="message" placeholder="Message" required></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
+    <div class="contact-info">
+      <p><strong>Adresse :</strong> Orphelinat Orphosy, Avenue de la Paix, Pointe-Noire, Congo</p>
+      <p><strong>Téléphone :</strong> +242 06 123 4567</p>
+      <p><strong>Email :</strong> contact@orphosy.org</p>
     </div>
+
+    <h2>Envoyez-nous un message</h2>
+    <form action="#" method="post">
+      <input type="text" name="nom" placeholder="Votre nom" required />
+      <input type="email" name="email" placeholder="Votre email" required />
+      <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
   </main>
+  
 
   <!-- FOOTER -->
   <footer>
@@ -81,5 +86,6 @@
       document.getElementById('nav-links').classList.toggle('show');
     }
   </script>
+
 </body>
 </html>
